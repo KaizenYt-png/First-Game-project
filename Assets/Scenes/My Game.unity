@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 198908744}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 308410324}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: PicksUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 573518860}
   m_Layer: 0
   m_Name: Speed Boost
-  m_TagString: Untagged
+  m_TagString: PicksUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,7 +859,7 @@ GameObject:
   - component: {fileID: 1197777693}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 1372695127}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 1735304606}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
