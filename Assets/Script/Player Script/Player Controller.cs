@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed = 10f;
     public float jumpForce = 10f;
     public float gravityModifier = 1f;
+    public float groundDrag = 1f;
 
     public bool onGround = false;
 
@@ -41,7 +42,18 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        MyInput();  
+        MyInput();
+        
+        // Adding drag
+
+        if (onGround)
+        {
+            rb.linearDamping = groundDrag;
+        }
+        else
+        {
+            rb.linearDamping = 0;
+        }
     }
 
     void MyInput()
@@ -57,7 +69,7 @@ public class PlayerController : MonoBehaviour
         // Making the player move in all direction 
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rb.AddForce(moveDirection.normalized * playerSpeed * 10f, ForceMode.Force );
+        rb.AddForce(10f * playerSpeed * moveDirection.normalized, ForceMode.Force );
 
         // Making the player jump by pressing Space
         if (jumpInput && onGround)
