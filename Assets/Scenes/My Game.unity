@@ -1129,6 +1129,7 @@ MonoBehaviour:
   playerSpeed: 200
   jumpForce: 600
   gravityModifier: 1.5
+  onGround: 1
   orientation: {fileID: 629389691}
 --- !u!4 &1372695129
 Transform:

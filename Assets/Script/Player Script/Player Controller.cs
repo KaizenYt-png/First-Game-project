@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float gravityModifier = 1f;
 
+    public bool onGround = false;
+
     public Transform orientation;
 
     private float horizontalInput;
@@ -58,9 +60,19 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(moveDirection.normalized * playerSpeed * 10f, ForceMode.Force );
 
         // Making the player jump by pressing Space
-        if (jumpInput)
+        if (jumpInput && onGround)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            onGround = false;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+        
     }
 }
