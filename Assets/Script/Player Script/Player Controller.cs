@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MyInput();
+        SpeedControl();
         
         // Adding drag
 
@@ -76,6 +77,18 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
+        }
+    }
+
+    void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        if(flatVel.magnitude > playerSpeed)
+        {
+            // limit velocity if needed
+            Vector3 limitedVel = flatVel.normalized * playerSpeed;
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
 
