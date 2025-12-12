@@ -1126,12 +1126,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9042ce1f8012d8d4688b1b32eaaffef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  playerSpeed: 200
-  jumpForce: 600
-  gravityModifier: 1.5
+  walkSpeed: 200
+  sprintSpeed: 500
   groundDrag: 5
+  gravityModifier: 1.5
+  airMultiplier: 0.1
+  jumpForce: 500
   onGround: 1
   orientation: {fileID: 629389691}
+  state: 0
 --- !u!4 &1372695129
 Transform:
   m_ObjectHideFlags: 0

@@ -4,12 +4,17 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    public float playerSpeed = 10f;
-    public float jumpForce = 10f;
-    public float gravityModifier = 1f;
+    [Header("Mouvement")]
+    private float playerSpeed;
+    public float walkSpeed;
+    public float sprintSpeed;
+
     public float groundDrag = 1f;
+
+    [Header("Jumping")]
+    public float gravityModifier = 1f;
     public float airMultiplier = 1f;
+    public float jumpForce = 10f;
 
     public bool onGround = false;
 
@@ -18,10 +23,19 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     private bool jumpInput;
+    private bool sprintInput;
 
     Vector3 moveDirection;
     
     Rigidbody rb;
+
+    public MouvementState state;
+    public enum MouvementState
+    {
+        walking,    
+        sprinting,
+        air
+    }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -46,6 +60,8 @@ public class PlayerController : MonoBehaviour
         MyInput();
         SpeedControl();
         Jump();
+        StateController();
+        
 
 
 
@@ -67,6 +83,9 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
+        sprintInput = Input.GetKey(KeyCode.LeftShift);
+
+
     }
 
     private void MovePlayer()
@@ -98,6 +117,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Potentialy a dash code
+
+    /* void Dash()
+    {
+        if (dashInput)
+        {
+            rb.AddForce(10f * playerSpeed * moveDirection.normalized * dashSpeed, ForceMode.Force);
+        }
+    }
+    */
+    
+
     void SpeedControl()
     {
         Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
@@ -107,6 +138,30 @@ public class PlayerController : MonoBehaviour
             // limit velocity if needed
             Vector3 limitedVel = flatVel.normalized * playerSpeed;
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
+        }
+    }
+
+    void StateController()
+    {
+        // Sprinting mode 
+        if (onGround && sprintInput)
+        {
+            state = MouvementState.sprinting;
+            playerSpeed = sprintSpeed;
+        }
+        
+        // Walking mode
+        else if (onGround)
+        {
+            state = MouvementState.walking;
+            playerSpeed = walkSpeed;
+        }
+
+        // In air mode
+        else if (!onGround)
+        {
+            state = MouvementState.air;
+
         }
     }
 
