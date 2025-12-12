@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
     public float gravityModifier = 1f;
     public float groundDrag = 1f;
+    public float airMultiplier = 1f;
 
     public bool onGround = false;
 
@@ -44,7 +45,10 @@ public class PlayerController : MonoBehaviour
     {
         MyInput();
         SpeedControl();
-        
+        Jump();
+
+
+
         // Adding drag
 
         if (onGround)
@@ -62,7 +66,7 @@ public class PlayerController : MonoBehaviour
         // Make the player move in a direction with key input
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-        jumpInput = Input.GetButtonDown("Jump");
+        jumpInput = Input.GetKeyDown(KeyCode.Space);
     }
 
     private void MovePlayer()
@@ -70,8 +74,22 @@ public class PlayerController : MonoBehaviour
         // Making the player move in all direction 
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        rb.AddForce(10f * playerSpeed * moveDirection.normalized, ForceMode.Force );
+        if (onGround)
+        {
+            // Controll the speed on the ground
+            rb.AddForce(10f * playerSpeed * moveDirection.normalized, ForceMode.Force);
+        }
+        else if (!onGround)
+        {
+            // Control the speed in the air
+            rb.AddForce(10f * playerSpeed * moveDirection.normalized * airMultiplier, ForceMode.Force);
+        }
 
+        
+    }
+
+    void Jump()
+    {
         // Making the player jump by pressing Space
         if (jumpInput && onGround)
         {
