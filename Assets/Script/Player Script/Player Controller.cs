@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 10f;
 
     public bool onGround = false;
+    public bool onSlop = false;
+
+    [Header("Slope handling")]
+    
 
     public Transform orientation;
 
@@ -24,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private bool jumpInput;
     private bool sprintInput;
+
 
     Vector3 moveDirection;
     
@@ -105,6 +110,7 @@ public class PlayerController : MonoBehaviour
         }
 
         
+
     }
 
     void Jump()
@@ -114,6 +120,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             onGround = false;
+            
         }
     }
 
@@ -139,6 +146,8 @@ public class PlayerController : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * playerSpeed;
             rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
+
+        
     }
 
     void StateController()
@@ -165,12 +174,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Ground"))
         {
             onGround = true;
+            
         }
+
         
+
     }
 }
