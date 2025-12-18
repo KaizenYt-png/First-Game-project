@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
+   
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
