@@ -32,13 +32,15 @@ public class PlayerController : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
-   
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
     private bool exitingSlope;
 
+    [Header("Power Manager")]
+    public bool hasShieldPowerUp;
+    public bool hasSpeedPowerUp;
 
     public Transform orientation;
 
@@ -77,6 +79,8 @@ public class PlayerController : MonoBehaviour
         MyInput();
         SpeedControl();
         StateHandler();
+
+        
 
         // handle drag
         if (grounded)
@@ -229,8 +233,29 @@ public class PlayerController : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
+
+    
+
+   
+
+
+
     private void OnCollisionEnter(Collision collision)
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("ShieldPowerUp"))
+        {
+            hasShieldPowerUp = true;
+            Destroy(other.gameObject);
+        }
+        if (other.CompareTag("SpeedPowerUp"))
+        {
+            hasSpeedPowerUp = true;
+            Destroy(other.gameObject);
+        }
     }
 }
