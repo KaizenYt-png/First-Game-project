@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - ShieldPowerUp
   - SpeedPowerUp
+  - Car
   layers:
   - Default
   - TransparentFX
