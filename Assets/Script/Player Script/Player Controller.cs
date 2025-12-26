@@ -242,7 +242,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        // If the player ahs shield power up destroy any object taht collide with him
+        if ((collision.gameObject.CompareTag("Car") || collision.gameObject.CompareTag("Obstacle")) && hasShieldPowerUp)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

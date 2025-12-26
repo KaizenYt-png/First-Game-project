@@ -1,10 +1,16 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PickUpManager : MonoBehaviour
 {
     private PlayerController player;
-    public float speedBoostAdd = 5;
-    
+    public float walkingSpeedBoostSpeed;
+    public float sprintingSpeedBoostSpeed;
+    public int speedPowerUpCountDown = 3;
+    public int shieldPowerUpCountDown = 5;
+
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,7 +23,8 @@ public class PickUpManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HasSpeedPowerUp();
+        HasShieldPowerUp();
     }
 
     private void FixedUpdate()
@@ -29,18 +36,34 @@ public class PickUpManager : MonoBehaviour
     {
         if (player.hasSpeedPowerUp == true)
         {
-            // Add speed value to the walk speed and sprint speed
-            player.sprintSpeed = player.sprintSpeed + speedBoostAdd;
-            player.walkSpeed = player.walkSpeed + speedBoostAdd;
+            // Making the normal speed of the player the speed of the speed boost
+            player.sprintSpeed = sprintingSpeedBoostSpeed;
+            player.walkSpeed = walkingSpeedBoostSpeed;
+            // Adding a countdown
+            StartCoroutine(SpeedUpCountDown(speedPowerUpCountDown));
             Debug.Log("SpeedBoost applied");
         }
     }
 
     void HasShieldPowerUp()
     {
-        if(player.hasSpeedPowerUp == true)
+        if(player.hasShieldPowerUp == true)
         {
 
+            // Adding a countdown
+            StartCoroutine(ShieldUpCountDown(shieldPowerUpCountDown));
+            Debug.Log("Shield applied");
         }
+    }
+    IEnumerator ShieldUpCountDown(int seconde)
+    {
+        yield return new WaitForSeconds(seconde);
+        player.hasShieldPowerUp = false; 
+    }
+
+    IEnumerator SpeedUpCountDown(int seconde)
+    {
+        yield return new WaitForSeconds(seconde);
+        player.hasSpeedPowerUp = false;
     }
 }

@@ -4,7 +4,8 @@ using UnityEngine.UIElements;
 
 public class MoveForward : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private PlayerController player;
     public float speed;
     
     
@@ -37,7 +38,7 @@ public class MoveForward : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Destroy the player game object on collision
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !player.hasShieldPowerUp)
         {
             Destroy(collision.gameObject);
         }

@@ -4,6 +4,7 @@ public class LauchForward : MonoBehaviour
 {
     public float lauchForce;
     private Rigidbody boxRb;
+    private PlayerController player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,7 +29,7 @@ public class LauchForward : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Destroy the player game object on collision
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !player.hasShieldPowerUp )
         {
             Destroy(collision.gameObject);
         }
