@@ -7,6 +7,8 @@ public class PickUpManager : MonoBehaviour
     private PlayerController player;
     public float walkingSpeedBoostSpeed;
     public float sprintingSpeedBoostSpeed;
+    private float walkingSpeed;
+    private float sprintingSpeed;
     public int speedPowerUpCountDown = 3;
     public int shieldPowerUpCountDown = 5;
 
@@ -17,6 +19,9 @@ public class PickUpManager : MonoBehaviour
     void Start()
     {
         player = GetComponent<PlayerController>();
+
+        walkingSpeed = player.walkSpeed;
+        sprintingSpeed = player.sprintSpeed;
         
     }
 
@@ -64,6 +69,11 @@ public class PickUpManager : MonoBehaviour
     IEnumerator SpeedUpCountDown(int seconde)
     {
         yield return new WaitForSeconds(seconde);
+
+        // Make the player go back to initial speed
+        player.walkSpeed = walkingSpeed;
+        player.sprintSpeed = sprintingSpeed;
+
         player.hasSpeedPowerUp = false;
     }
 }

@@ -28,11 +28,7 @@ public class MoveForward : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //The obstacle get detroy when entering on collision with the wall
-        if (other.CompareTag("Wall"))
-        {
-            Destroy(gameObject);
-        }
+        
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -41,6 +37,12 @@ public class MoveForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !player.hasShieldPowerUp)
         {
             Destroy(collision.gameObject);
+        }
+
+        //The obstacle get detroy when entering on collision with the wall
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
         }
     }
 
