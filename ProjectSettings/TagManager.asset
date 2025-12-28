@@ -11,6 +11,7 @@ TagManager:
   - ShieldPowerUp
   - SpeedPowerUp
   - Car
+  - Shield
   layers:
   - Default
   - TransparentFX
