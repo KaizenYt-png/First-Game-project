@@ -28,20 +28,24 @@ public class MoveForward : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Shield"))
+        {
+            // If the player has shield destroy any object that collide with it
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Destroy the player game object on collision
-        if (collision.gameObject.CompareTag("Player") && !player.hasShieldPowerUp)
+        // Destroy the player game object on collision
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            
         }
-
-        //The obstacle get detroy when entering on collision with the wall
-        if (collision.gameObject.CompareTag("Wall"))
+        else if (collision.gameObject.CompareTag("Wall"))
         {
+            // The obstacle get detroy when entering on collision with the wall
             Destroy(gameObject);
         }
     }

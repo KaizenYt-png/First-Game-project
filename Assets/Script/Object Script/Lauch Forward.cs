@@ -20,20 +20,22 @@ public class LauchForward : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //The obstacle get detroy when entering on collision with the wall
-        if (other.CompareTag("Wall"))
+        if (other.CompareTag("Shield"))
         {
+            // If the player has shield destroy any object that collide with it
             Destroy(gameObject);
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
         //Destroy the player game object on collision
-        if (collision.gameObject.CompareTag("Player") && !player.hasShieldPowerUp )
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Car"))
+        else if (collision.gameObject.CompareTag("Ground") || 
+                 collision.gameObject.CompareTag("Car") || 
+                 collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
         }

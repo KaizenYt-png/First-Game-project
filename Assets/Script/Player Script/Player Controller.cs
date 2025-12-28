@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     [Header("Power Manager")]
     public bool hasShieldPowerUp;
     public bool hasSpeedPowerUp;
+    public GameObject shield;
 
     public Transform orientation;
 
@@ -242,11 +243,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // If the player ahs shield power up destroy any object taht collide with him
-        if ((collision.gameObject.CompareTag("Car") || collision.gameObject.CompareTag("Obstacle")) && hasShieldPowerUp)
-        {
-            Destroy(collision.gameObject);
-        }
+        
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -254,9 +252,11 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("ShieldPowerUp"))
         {
             hasShieldPowerUp = true;
+            
+            shield.gameObject.SetActive(true);
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("SpeedPowerUp"))
+        else if (other.CompareTag("SpeedPowerUp"))
         {
             hasSpeedPowerUp = true;
             Destroy(other.gameObject);

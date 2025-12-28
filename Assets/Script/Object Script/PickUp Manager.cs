@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class PickUpManager : MonoBehaviour
 {
@@ -63,6 +64,8 @@ public class PickUpManager : MonoBehaviour
     IEnumerator ShieldUpCountDown(int seconde)
     {
         yield return new WaitForSeconds(seconde);
+        
+        player.shield.gameObject.SetActive(false);
         player.hasShieldPowerUp = false; 
     }
 
