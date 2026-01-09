@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5c1957538e3bb4f8b5bdfb782e0a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  carPrefabs: {fileID: 8946871122231935302, guid: 6cfd5a19aad7874448aa1eb88bccc6de, type: 3}
+  carPrefabs: {fileID: 3859950695711406603, guid: eb1d6cef4963f9948a2d46b477134dfb, type: 3}
   boxPrefabs: {fileID: 1777741694959212322, guid: 440d83a1b09149a42ab3494fa4f382ef, type: 3}
 --- !u!4 &883886784
 Transform:
