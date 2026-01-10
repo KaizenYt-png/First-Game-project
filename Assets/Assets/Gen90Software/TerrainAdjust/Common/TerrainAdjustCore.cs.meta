@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d29d0ad63016c72469dd7b5b244cc852
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 190403
+  packageName: Terrain Adjust
+  packageVersion: 1.2.0
+  assetPath: Assets/Gen90Software/TerrainAdjust/Common/TerrainAdjustCore.cs
+  uploadId: 844542

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: befc21daf77d06041bd565528d905a48
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 190403
+  packageName: Terrain Adjust
+  packageVersion: 1.2.0
+  assetPath: Assets/Gen90Software/TerrainAdjust/Runtime/TerrainAdjustRuntime.cs
+  uploadId: 844542
