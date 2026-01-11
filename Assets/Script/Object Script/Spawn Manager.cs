@@ -3,8 +3,9 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public GameObject carPrefabs;
+    public GameObject[] carPrefabs;
     public GameObject boxPrefabs;
+    
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
 
@@ -33,9 +34,10 @@ public class SpawnManager : MonoBehaviour
     void SpawnCar()
     {
         // Making the car spawn at random location on X axis
+        int carIndex = Random.Range(0,carPrefabs.Length);
         float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
         Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-        Instantiate(carPrefabs, spawnPos, carPrefabs.transform.rotation);
+        Instantiate(carPrefabs[carIndex], spawnPos, carPrefabs[carIndex].transform.rotation);
     }
 
     void SpawnBox()
