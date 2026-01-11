@@ -5,13 +5,16 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject carPrefabs;
     public GameObject boxPrefabs;
-    private float timeToSpawnCar = 5;
-    private float timeBettwenSpawnCar = 4;
+    public float timeToSpawnCar = 5;
+    public float timeBettwenSpawnCar = 4;
 
-    private float timeToSpawnBox = 1;
-    private float timeBettwenSpawnBox = 2;
+    public float timeToSpawnBox = 1;
+    public float timeBettwenSpawnBox = 2;
 
-    private float spawnRangeX = 3;
+    public float spawnRangeX1 = 3;
+    public float spawnRangeX2 = 3;
+    public float spawnPosY = 27.5f;
+    public float spawnPosZ = 90f;
 
 
     void Start()
@@ -30,16 +33,16 @@ public class SpawnManager : MonoBehaviour
     void SpawnCar()
     {
         // Making the car spawn at random location on X axis
-        float spawnPosX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector3 spawnPos = new Vector3(spawnPosX, 27.5f, 90f);
+        float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
+        Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
         Instantiate(carPrefabs, spawnPos, carPrefabs.transform.rotation);
     }
 
     void SpawnBox()
     {
         // Making the box spawn at random location on X axis
-        float spawnPosX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector3 spawnPos = new Vector3(spawnPosX, 27.5f, 90f);
+        float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
+        Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
         Instantiate(boxPrefabs, spawnPos, boxPrefabs.transform.rotation);
     }
 

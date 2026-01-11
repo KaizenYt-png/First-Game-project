@@ -55,7 +55,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4403059267407818357}
-  - screenRelativeHeight: 0.01
+  - screenRelativeHeight: 0.05363202
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1520484179785444244}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcc1e372333f0a84ab1ab20f6f930b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LauchForward
-  lauchForce: 30
+  lauchForce: 60
 --- !u!1 &3789367169521099310
 GameObject:
   m_ObjectHideFlags: 0
