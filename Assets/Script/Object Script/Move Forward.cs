@@ -41,7 +41,8 @@ public class MoveForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
-            
+            player.isPlayerDead = true;
+
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {

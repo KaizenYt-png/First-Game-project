@@ -32,12 +32,14 @@ public class LauchForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            player.isPlayerDead = true;
         }
         else if (
                  collision.gameObject.CompareTag("Car") || 
                  collision.gameObject.CompareTag("Wall"))
         {
             Destroy(gameObject);
+            
         }
     }
 }

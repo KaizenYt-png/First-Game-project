@@ -43,6 +43,10 @@ public class PlayerController : MonoBehaviour
     public bool hasSpeedPowerUp;
     public GameObject shield;
 
+    [Header("Player State")]
+    public bool isPlayerDead = false;
+
+
     public Transform orientation;
 
     float horizontalInput;
