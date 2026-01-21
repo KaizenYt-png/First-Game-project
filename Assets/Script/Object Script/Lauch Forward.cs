@@ -33,7 +33,7 @@ public class LauchForward : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Ground") || 
+        else if (
                  collision.gameObject.CompareTag("Car") || 
                  collision.gameObject.CompareTag("Wall"))
         {
