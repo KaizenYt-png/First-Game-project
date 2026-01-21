@@ -15496,7 +15496,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2130396687}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25937,7 +25937,6 @@ MonoBehaviour:
   - {fileID: 2922220883736789182, guid: 041e4e3100f07184cacfe35dce34f022, type: 3}
   - {fileID: 1718881139866272103, guid: d84787863a48b884e8c303159510c801, type: 3}
   boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
-  gameManager: {fileID: 0}
   timeToSpawnCar: 2
   timeBettwenSpawnCar: 0.75
   timeToSpawnBox: 1
