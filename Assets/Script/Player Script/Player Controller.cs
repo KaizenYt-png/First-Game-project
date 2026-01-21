@@ -257,7 +257,7 @@ public class PlayerController : MonoBehaviour
         {
             hasShieldPowerUp = true;
             
-            shield.gameObject.SetActive(true);
+            shield.SetActive(true);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("SpeedPowerUp"))

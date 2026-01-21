@@ -5,6 +5,7 @@ public class LauchForward : MonoBehaviour
     public float lauchForce;
     private Rigidbody boxRb;
     private PlayerController player;
+    private GameManager gameManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,6 +34,7 @@ public class LauchForward : MonoBehaviour
         {
             Destroy(collision.gameObject);
             player.isPlayerDead = true;
+            
         }
         else if (
                  collision.gameObject.CompareTag("Car") || 

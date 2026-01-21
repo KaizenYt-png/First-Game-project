@@ -7,9 +7,10 @@ public class MoveForward : MonoBehaviour
 
     private PlayerController player;
     public float speed;
-    
-    
-    
+    private GameManager gameManager;
+
+
+
     void Start()
     {
         
@@ -41,6 +42,7 @@ public class MoveForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(collision.gameObject);
+            
             player.isPlayerDead = true;
 
         }
