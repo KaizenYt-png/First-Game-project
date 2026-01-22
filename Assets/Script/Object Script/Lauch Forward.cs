@@ -9,6 +9,7 @@ public class LauchForward : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
         boxRb = GetComponent<Rigidbody>();
         boxRb.AddForce(Vector3.back * lauchForce, ForceMode.Impulse);
     }

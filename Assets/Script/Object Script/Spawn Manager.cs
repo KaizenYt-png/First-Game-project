@@ -18,16 +18,21 @@ public class SpawnManager : MonoBehaviour
     public float spawnPosY = 27.5f;
     public float spawnPosZ = 90f;
 
+    
+
 
     void Start()
     {
-        while (gameManager.isGameActive == true)
+
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
+        while (true)
         {
             Debug.Log("Spawing object");
             InvokeRepeating("SpawnCar", timeToSpawnCar, timeBettwenSpawnCar);
             InvokeRepeating("SpawnBox", timeToSpawnBox, timeBettwenSpawnBox);
         }
-
+        
 
 
     }
@@ -35,8 +40,10 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
+
+    
 
     void SpawnCar()
     {
