@@ -5,7 +5,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject[] carPrefabs;
     public GameObject boxPrefabs;
-    private GameManager gameManager;
+    public GameManager gameManager;
     
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
@@ -21,13 +21,15 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        // Spawning the object constanly
         while (gameManager.isGameActive == true)
         {
+            Debug.Log("Spawing object");
             InvokeRepeating("SpawnCar", timeToSpawnCar, timeBettwenSpawnCar);
             InvokeRepeating("SpawnBox", timeToSpawnBox, timeBettwenSpawnBox);
         }
-        
+
+
+
     }
 
     // Update is called once per frame
