@@ -34,8 +34,8 @@ public class LauchForward : MonoBehaviour
         //Desactivate the player game object on collision
         if (collision.gameObject.CompareTag("Player"))
         {
-            
-            SceneManager.LoadSceneAsync("Game Over");
+
+            SceneManagement.LoadSceneByIndex(2);
 
         }
         else if (
