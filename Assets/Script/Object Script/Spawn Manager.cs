@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -10,8 +11,9 @@ public class SpawnManager : MonoBehaviour
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
 
-    public float timeToSpawnBox = 1;
-    public float timeBettwenSpawnBox = 2;
+    public float spawnRate = 0.5f;
+    /*public float timeToSpawnBox = 1;
+      public float timeBettwenSpawnBox = 2; */
 
     public float spawnRangeX1 = 3;
     public float spawnRangeX2 = 3;
@@ -23,16 +25,9 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
-        while (true)
-        {
-            Debug.Log("Spawing object");
-            InvokeRepeating("SpawnCar", timeToSpawnCar, timeBettwenSpawnCar);
-            InvokeRepeating("SpawnBox", timeToSpawnBox, timeBettwenSpawnBox);
-        }
-        
+        StartCoroutine(SpawnAllTarget());
 
 
     }
@@ -43,6 +38,16 @@ public class SpawnManager : MonoBehaviour
          
     }
 
+    public IEnumerator SpawnAllTarget()
+    {
+        
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnRate);
+            SpawnBox();
+            SpawnCar();
+        }
+    }
     
 
     void SpawnCar()

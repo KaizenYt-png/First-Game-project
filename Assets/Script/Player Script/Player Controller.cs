@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -85,7 +86,12 @@ public class PlayerController : MonoBehaviour
         SpeedControl();
         StateHandler();
 
-        
+
+        // look if player die
+        if (gameObject.activeSelf == false)
+        {
+            isPlayerDead = true;
+        }
 
         // handle drag
         if (grounded)
@@ -266,4 +272,6 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    
 }

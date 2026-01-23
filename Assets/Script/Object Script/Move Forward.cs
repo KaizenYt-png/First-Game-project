@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 
@@ -38,12 +39,10 @@ public class MoveForward : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        // Destroy the player game object on collision
+        // Desactivate the player game object on collision
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-            
-            player.isPlayerDead = true;
+            SceneManager.LoadSceneAsync("Game Over");
 
         }
         else if (collision.gameObject.CompareTag("Wall"))

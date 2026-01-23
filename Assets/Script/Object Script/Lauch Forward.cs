@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LauchForward : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class LauchForward : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        
         boxRb = GetComponent<Rigidbody>();
         boxRb.AddForce(Vector3.back * lauchForce, ForceMode.Impulse);
     }
@@ -30,12 +31,12 @@ public class LauchForward : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //Destroy the player game object on collision
+        //Desactivate the player game object on collision
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-            player.isPlayerDead = true;
             
+            SceneManager.LoadSceneAsync("Game Over");
+
         }
         else if (
                  collision.gameObject.CompareTag("Car") || 
