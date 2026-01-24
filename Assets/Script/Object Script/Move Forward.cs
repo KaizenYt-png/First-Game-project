@@ -9,6 +9,7 @@ public class MoveForward : MonoBehaviour
     private PlayerController player;
     public float speed;
     private GameManager gameManager;
+    public ParticleSystem explosionParticle;
 
 
 
@@ -49,6 +50,7 @@ public class MoveForward : MonoBehaviour
         {
             // The obstacle get detroy when entering on collision with the wall
             Destroy(gameObject);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
         }
     }
 
