@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] carPrefabs;
     public GameObject boxPrefabs;
     public GameManager gameManager;
+    public EndSpawning endSpawning;
     
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
@@ -20,13 +21,17 @@ public class SpawnManager : MonoBehaviour
     public float spawnPosY = 27.5f;
     public float spawnPosZ = 90f;
 
+    public bool gameActive = true;
+
     
 
 
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        endSpawning = GameObject.Find("End Spawning Trigger").GetComponent<EndSpawning>();
 
+        gameActive = true;
         StartCoroutine(SpawnAllTarget());
 
 
@@ -41,7 +46,7 @@ public class SpawnManager : MonoBehaviour
     public IEnumerator SpawnAllTarget()
     {
         
-        while (true)
+        while (endSpawning.gameActive)
         {
             yield return new WaitForSeconds(spawnRate);
             SpawnBox();
@@ -68,4 +73,5 @@ public class SpawnManager : MonoBehaviour
     }
 
     
+
 }
