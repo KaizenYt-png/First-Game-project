@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player State")]
     public bool isPlayerDead = false;
+    public bool playerWin = false;
 
 
     public Transform orientation;
@@ -270,6 +271,10 @@ public class PlayerController : MonoBehaviour
         {
             hasSpeedPowerUp = true;
             Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Win"))
+        {
+            playerWin = true;
         }
     }
 

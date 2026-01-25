@@ -12,6 +12,8 @@ TagManager:
   - SpeedPowerUp
   - Car
   - Shield
+  - FxTemporaire
+  - Win
   layers:
   - Default
   - TransparentFX
