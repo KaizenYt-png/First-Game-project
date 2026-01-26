@@ -274,7 +274,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Win"))
         {
-            playerWin = true;
+            SceneManagement.LoadSceneByIndex(4);
         }
     }
 

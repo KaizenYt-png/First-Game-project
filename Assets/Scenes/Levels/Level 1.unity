@@ -2958,7 +2958,7 @@ Transform:
   m_GameObject: {fileID: 211600466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -916.0191, y: 2.2910001, z: 74.56724}
+  m_LocalPosition: {x: -920.3, y: 2.2910001, z: 96.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14304,7 +14304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1030621131}
-  remainingTime: 30
+  remainingTime: 60
 --- !u!114 &1020802501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25654,7 +25654,7 @@ MonoBehaviour:
   spawnRangeX2: -912.78
   spawnPosY: 112.28
   spawnPosZ: 442.72
-  gameActive: 1
+  gameActive: 0
 --- !u!4 &1713438552
 Transform:
   m_ObjectHideFlags: 0
@@ -26402,7 +26402,7 @@ Transform:
   m_GameObject: {fileID: 1759732082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -917.52905, y: 0.95, z: 74.1}
+  m_LocalPosition: {x: -921.80994, y: 0.64, z: 96.07276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
