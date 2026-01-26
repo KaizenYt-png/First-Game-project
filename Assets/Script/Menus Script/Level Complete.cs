@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class LevelComplete : MonoBehaviour
 {
-    [SerializeField] int nextLevelIndex = 0;
+    [SerializeField] int nextLevelIndex = 1;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.visible = true;
-        
+        Cursor.lockState = CursorLockMode.None;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class LevelComplete : MonoBehaviour
 
     public void GoNextLevel()
     {
-        SceneManagement.LoadSceneByIndex(1);
+        SceneManagement.LoadSceneByIndex(nextLevelIndex);
     }
 
     public void RestartLevel()
