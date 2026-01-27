@@ -3094,7 +3094,7 @@ Transform:
   m_GameObject: {fileID: 211600466}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -920.3, y: 2.2910001, z: 96.54}
+  m_LocalPosition: {x: -921.91, y: 2.2910001, z: 40.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4067,7 +4067,7 @@ Transform:
   m_GameObject: {fileID: 284388313}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.86, y: -76.91, z: -310.65}
+  m_LocalPosition: {x: -3.86, y: -76.91, z: -336.73}
   m_LocalScale: {x: 2.79, y: 2.79, z: 2.79}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -25921,7 +25921,7 @@ MonoBehaviour:
   boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
   gameManager: {fileID: 2130396687}
   endSpawning: {fileID: 0}
-  timeToSpawnCar: 2
+  timeToSpawnCar: 0
   timeBettwenSpawnCar: 0.75
   spawnRate: 0.5
   spawnRangeX1: -928.33
@@ -26678,7 +26678,7 @@ Transform:
   m_GameObject: {fileID: 1759732082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -921.80994, y: 0.64, z: 96.07276}
+  m_LocalPosition: {x: -923.4199, y: 0.64, z: 40.17276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

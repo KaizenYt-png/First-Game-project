@@ -964,8 +964,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5c1957538e3bb4f8b5bdfb782e0a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  carPrefabs: {fileID: 3859950695711406603, guid: eb1d6cef4963f9948a2d46b477134dfb, type: 3}
+  carPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+  gameManager: {fileID: 0}
+  endSpawning: {fileID: 0}
+  timeToSpawnCar: 5
+  timeBettwenSpawnCar: 4
+  spawnRate: 0.5
+  spawnRangeX1: 3
+  spawnRangeX2: 3
+  spawnPosY: 27.5
+  spawnPosZ: 90
+  gameActive: 0
 --- !u!4 &883886784
 Transform:
   m_ObjectHideFlags: 0
@@ -1345,6 +1358,8 @@ MonoBehaviour:
   hasShieldPowerUp: 0
   hasSpeedPowerUp: 0
   shield: {fileID: 2144447000}
+  isPlayerDead: 0
+  playerWin: 0
   orientation: {fileID: 629389691}
   state: 0
 --- !u!4 &1372695129
@@ -1381,6 +1396,8 @@ MonoBehaviour:
   sprintingSpeedBoostSpeed: 18
   speedPowerUpCountDown: 3
   shieldPowerUpCountDown: 5
+  shieldIndication: {fileID: 0}
+  speedBoostIndication: {fileID: 0}
 --- !u!4 &1381555055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1225297511855151917, guid: 99ea5c30074df6049a24cf3e32d67aab, type: 3}
