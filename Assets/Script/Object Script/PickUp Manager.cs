@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
@@ -12,6 +13,10 @@ public class PickUpManager : MonoBehaviour
     private float sprintingSpeed;
     public int speedPowerUpCountDown = 3;
     public int shieldPowerUpCountDown = 5;
+
+    [Header("UI")]
+    public TextMeshProUGUI shieldIndication;
+    public TextMeshProUGUI speedBoostIndication;
 
 
 

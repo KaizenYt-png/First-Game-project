@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
     [Header("Player State")]
     public bool isPlayerDead = false;
     public bool playerWin = false;
+
+    
+
 
 
     public Transform orientation;
