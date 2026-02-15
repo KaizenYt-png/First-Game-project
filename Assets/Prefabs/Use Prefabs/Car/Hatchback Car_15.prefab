@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 20385034141536211}
   - component: {fileID: 4028390160020439158}
   - component: {fileID: 1153837158124123324}
-  - component: {fileID: 8190380500954381041}
   - component: {fileID: 2242293582735578594}
   - component: {fileID: 4378658387654001710}
   - component: {fileID: 6598346798454974337}
+  - component: {fileID: 2338490181759090048}
   m_Layer: 0
   m_Name: Hatchback Car_15
   m_TagString: Car
@@ -98,27 +98,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8190380500954381041
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793685457875359081}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.0153255, y: 1.30608, z: 4.4259872}
-  m_Center: {x: -0.0000014901161, y: 0.9412773, z: 0.06991875}
 --- !u!54 &2242293582735578594
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,7 +106,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793685457875359081}
   serializedVersion: 5
-  m_Mass: 7000
+  m_Mass: 500
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -158,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec395acd6778134382793fb1b707176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveForward
-  speed: 1
+  speed: 0
+  lauchForce: 30000
   explosionParticle: {fileID: 198267365771992106, guid: 2dc5347a44240ea4597cafb2d1d7c160, type: 3}
   explosionSF: {fileID: 8300000, guid: 6274e376809d2ea4ca04f17f7cab121a, type: 3}
 --- !u!82 &6598346798454974337
@@ -258,6 +238,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!64 &2338490181759090048
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793685457875359081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6287679157935091289, guid: 479bd64bd0eb14d47a9189dab8f05695, type: 3}
 --- !u!1 &3210515104880433319
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,8 +358,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3210515104880433319}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -485,8 +487,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4922557203078635859}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -614,8 +616,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5428246394833923508}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
     damper: 4500
@@ -743,8 +745,8 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8186783879789201615}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
     damper: 4500

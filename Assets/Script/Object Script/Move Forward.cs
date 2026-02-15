@@ -9,18 +9,22 @@ public class MoveForward : MonoBehaviour
 
     private PlayerController player;
     public float speed;
+    public float lauchForce;
     private GameManager gameManager;
     public ParticleSystem explosionParticle;
     private AudioSource audioSource;
     public AudioClip explosionSF;
+    private Rigidbody carRb;
 
 
 
 
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        
         audioSource = GetComponent<AudioSource>();
+        carRb = GetComponent<Rigidbody>();
+        carRb.AddForce(Vector3.back * lauchForce, ForceMode.Impulse);
     }
 
     // Update is called once per frame
