@@ -25196,11 +25196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782023171430971777, guid: bbf6aaa394158294db5535dd05892380, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.6969
+      value: 36.69
       objectReference: {fileID: 0}
     - target: {fileID: 2782023171430971777, guid: bbf6aaa394158294db5535dd05892380, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 140.2914
+      value: 140.2
       objectReference: {fileID: 0}
     - target: {fileID: 2782023171430971777, guid: bbf6aaa394158294db5535dd05892380, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25918,13 +25918,12 @@ MonoBehaviour:
   - {fileID: 793685457875359081, guid: 9c92406c14c380849bca38280c133c64, type: 3}
   - {fileID: 2922220883736789182, guid: 041e4e3100f07184cacfe35dce34f022, type: 3}
   - {fileID: 1718881139866272103, guid: d84787863a48b884e8c303159510c801, type: 3}
-  - {fileID: 1824555476060948189, guid: 41e707e83fa326a4daa125fdc4a6a0fd, type: 3}
   boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
   gameManager: {fileID: 2130396687}
   endSpawning: {fileID: 0}
   timeToSpawnCar: 0
   timeBettwenSpawnCar: 0
-  spawnRate: 5
+  spawnRate: 2
   spawnRangeX1: -928.33
   spawnRangeX2: -912.78
   spawnPosY: 112.28
