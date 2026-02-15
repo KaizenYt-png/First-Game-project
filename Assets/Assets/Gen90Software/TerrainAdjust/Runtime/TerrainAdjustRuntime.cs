@@ -40,11 +40,12 @@ namespace Gen90Software.Tools
 		private Vector3 adjustNormal;
 		private Vector3 lastAdjustPos;
 
-		#endregion
+        #endregion
 
-		#region Mono Methods
+        #region Mono Methods
 
-		public void OnValidate()
+        [System.Obsolete]
+        public void OnValidate()
 		{
 			if (tRender == null)
 			{

@@ -11,12 +11,16 @@ public class MoveForward : MonoBehaviour
     public float speed;
     private GameManager gameManager;
     public ParticleSystem explosionParticle;
+    private AudioSource audioSource;
+    public AudioClip explosionSF;
+
 
 
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<PlayerController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,8 +54,10 @@ public class MoveForward : MonoBehaviour
         else if (collision.gameObject.CompareTag("Wall"))
         {
             // The obstacle get detroy when entering on collision with the wall
+            AudioSource.PlayClipAtPoint(explosionSF, transform.position);
             Destroy(gameObject);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+            
             
         }
     }
