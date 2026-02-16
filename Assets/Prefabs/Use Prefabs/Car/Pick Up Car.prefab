@@ -261,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec395acd6778134382793fb1b707176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveForward
-  speed: 0
-  lauchForce: 10000
+  speed: 23
+  lauchForce: 1000
   explosionParticle: {fileID: 198267365771992106, guid: 2dc5347a44240ea4597cafb2d1d7c160, type: 3}
   explosionSF: {fileID: 8300000, guid: 6274e376809d2ea4ca04f17f7cab121a, type: 3}
 --- !u!54 &6503922563291688842
