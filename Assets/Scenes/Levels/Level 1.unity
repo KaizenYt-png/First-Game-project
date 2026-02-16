@@ -25914,10 +25914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
   carPrefabs:
-  - {fileID: 3859950695711406603, guid: eb1d6cef4963f9948a2d46b477134dfb, type: 3}
-  - {fileID: 793685457875359081, guid: 9c92406c14c380849bca38280c133c64, type: 3}
-  - {fileID: 2922220883736789182, guid: 041e4e3100f07184cacfe35dce34f022, type: 3}
-  - {fileID: 1718881139866272103, guid: d84787863a48b884e8c303159510c801, type: 3}
+  - {fileID: 5965209700560220994, guid: c98f7aa5a4b596d4aa2cbec16569d93f, type: 3}
   boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
   gameManager: {fileID: 2130396687}
   endSpawning: {fileID: 0}

@@ -30,7 +30,7 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveObjectForward();
+        /*MoveObjectForward();*/
     }
 
     void MoveObjectForward()
