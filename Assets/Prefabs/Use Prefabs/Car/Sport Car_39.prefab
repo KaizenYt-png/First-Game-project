@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 4423404262671424959}
   - component: {fileID: 1739943580489917120}
   - component: {fileID: 3304173893499288591}
+  - component: {fileID: 8555005013123338760}
   m_Layer: 0
   m_Name: Sport Car_39 BR Tire
   m_TagString: Untagged
@@ -358,7 +359,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4269274948289535760}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -389,6 +390,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &8555005013123338760
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4269274948289535760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: -0.013606764, y: 0.00245367, z: -0.00040593743}
 --- !u!1 &4811583937503481981
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +425,7 @@ GameObject:
   - component: {fileID: 8973012489002246463}
   - component: {fileID: 1560313385138903420}
   - component: {fileID: 2178370103754907559}
+  - component: {fileID: 706077354709192723}
   m_Layer: 0
   m_Name: Sport Car_39 FL Tire
   m_TagString: Untagged
@@ -487,7 +512,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4811583937503481981}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -518,6 +543,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &706077354709192723
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4811583937503481981}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: 0.013606861, y: 0.00245364, z: -0.00041224062}
 --- !u!1 &5391733334664617835
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +578,7 @@ GameObject:
   - component: {fileID: 145744264087317931}
   - component: {fileID: 2514234345204123254}
   - component: {fileID: 2926522073327614675}
+  - component: {fileID: 7681208272790611211}
   m_Layer: 0
   m_Name: Sport Car_39 BL Tire
   m_TagString: Untagged
@@ -616,7 +665,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5391733334664617835}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -647,6 +696,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &7681208272790611211
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5391733334664617835}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: 0.013606764, y: 0.00245367, z: -0.00040593743}
 --- !u!1 &8014938012932683774
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +731,7 @@ GameObject:
   - component: {fileID: 6974394600249199301}
   - component: {fileID: 1135371725272355876}
   - component: {fileID: 2612143916379371278}
+  - component: {fileID: 5384697564591252970}
   m_Layer: 0
   m_Name: Sport Car_39 FR Tire
   m_TagString: Untagged
@@ -745,7 +818,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8014938012932683774}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -776,3 +849,26 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &5384697564591252970
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014938012932683774}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: -0.013606861, y: 0.00245364, z: -0.00041224062}

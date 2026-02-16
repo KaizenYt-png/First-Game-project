@@ -52,7 +52,7 @@ public class MoveForward : MonoBehaviour
         // Desactivate the player game object on collision
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManagement.LoadSceneByIndex(2);
+            SceneManagement.LoadSceneByIndex(3);
 
         }
         else if (collision.gameObject.CompareTag("Wall"))

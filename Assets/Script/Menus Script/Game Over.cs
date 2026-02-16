@@ -28,6 +28,6 @@ public class GameOver : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManagement.LoadSceneByIndex(3);
+        SceneManagement.LoadSceneByIndex(0);
     }
 }

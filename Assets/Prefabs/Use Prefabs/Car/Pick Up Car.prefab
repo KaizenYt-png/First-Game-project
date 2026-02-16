@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4126269660831700882}
   - component: {fileID: 8171696668999825047}
   - component: {fileID: 2732042262103290459}
+  - component: {fileID: 4019637597914445796}
   m_Layer: 0
   m_Name: Pick Up_11 BR Tire
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3434403357681093586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9749298, y: 0.43736982, z: -1.8174477}
+  m_LocalPosition: {x: 0.98, y: 0.43736982, z: -1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98,7 +99,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3434403357681093586}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -129,6 +130,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &4019637597914445796
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434403357681093586}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.43335998
+  m_Height: 0.86671984
+  m_Direction: 1
+  m_Center: {x: -0.0009317547, y: -0.000000044703484, z: -0.000000014901161}
 --- !u!1 &3859950695711406603
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +425,7 @@ GameObject:
   - component: {fileID: 9212471992648956889}
   - component: {fileID: 4877782425380300158}
   - component: {fileID: 5347613168684085323}
+  - component: {fileID: 3032785939764149388}
   m_Layer: 0
   m_Name: Pick Up_11 BL Tire
   m_TagString: Untagged
@@ -417,7 +442,7 @@ Transform:
   m_GameObject: {fileID: 4312797792577633618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9749298, y: 0.43736982, z: -1.8174477}
+  m_LocalPosition: {x: -0.97, y: 0.43736982, z: -1.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -487,7 +512,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312797792577633618}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -518,6 +543,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &3032785939764149388
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312797792577633618}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.43335998
+  m_Height: 0.86671984
+  m_Direction: 1
+  m_Center: {x: 0.00093399733, y: -0.000000044703484, z: 0.000000014901161}
 --- !u!1 &5305157157434046465
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +578,7 @@ GameObject:
   - component: {fileID: 3454962184207232038}
   - component: {fileID: 6820694111246149851}
   - component: {fileID: 1491707263796094141}
+  - component: {fileID: 3222410515563220654}
   m_Layer: 0
   m_Name: Pick Up_11 FR Tire
   m_TagString: Untagged
@@ -546,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 5305157157434046465}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9749298, y: 0.43736982, z: 1.8226166}
+  m_LocalPosition: {x: 0.98, y: 0.43736982, z: 1.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -616,7 +665,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5305157157434046465}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -647,6 +696,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &3222410515563220654
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305157157434046465}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.43335992
+  m_Height: 0.86671984
+  m_Direction: 1
+  m_Center: {x: -0.0009318888, y: -0.000000044703484, z: 0.0000014454126}
 --- !u!1 &6606338560432385099
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +731,7 @@ GameObject:
   - component: {fileID: 6113638327701298055}
   - component: {fileID: 455064429057571843}
   - component: {fileID: 2198688773706001337}
+  - component: {fileID: 3675851657418842603}
   m_Layer: 0
   m_Name: Pick Up_11 FL Tire
   m_TagString: Untagged
@@ -675,7 +748,7 @@ Transform:
   m_GameObject: {fileID: 6606338560432385099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9749298, y: 0.43736982, z: 1.8226166}
+  m_LocalPosition: {x: -0.97, y: 0.43736982, z: 1.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -745,7 +818,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6606338560432385099}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -776,3 +849,26 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &3675851657418842603
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606338560432385099}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.43335992
+  m_Height: 0.86671984
+  m_Direction: 1
+  m_Center: {x: 0.00093401223, y: -0.000000044703484, z: 0.0000027567148}

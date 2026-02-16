@@ -16,10 +16,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel1()
     {
-        SceneManagement.LoadSceneByIndex(0);
+        SceneManagement.LoadSceneByIndex(1);
     }
     public void LoadLevel2()
     {
-        SceneManagement.LoadSceneByIndex(1);
+        SceneManagement.LoadSceneByIndex(2);
     }
 }

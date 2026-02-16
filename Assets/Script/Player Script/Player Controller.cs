@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
     bool readyToJump;
-    public float gravityModifier;
+    
 
     [Header("Crouching")]
     public float crouchSpeed;
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Physics.gravity *= gravityModifier;
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 

@@ -35,7 +35,7 @@ public class LauchForward : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
 
-            SceneManagement.LoadSceneByIndex(2);
+            SceneManagement.LoadSceneByIndex(3);
 
         }
         else if (

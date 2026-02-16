@@ -272,6 +272,7 @@ GameObject:
   - component: {fileID: 9054412952064852831}
   - component: {fileID: 8458192802369033998}
   - component: {fileID: 512750341625098432}
+  - component: {fileID: 5158062870771773927}
   m_Layer: 0
   m_Name: N_Muscle Car_10 BR Tire
   m_TagString: Untagged
@@ -358,7 +359,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5374494991868441772}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -389,6 +390,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &5158062870771773927
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5374494991868441772}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: -0.014541842, y: 0.0004720688, z: -0.00018799305}
 --- !u!1 &6683296320774264830
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +425,7 @@ GameObject:
   - component: {fileID: 2707669338592916624}
   - component: {fileID: 8313629628880257167}
   - component: {fileID: 9152354801270134219}
+  - component: {fileID: 98316762270050955}
   m_Layer: 0
   m_Name: N_Muscle Car_10 FL Tire
   m_TagString: Untagged
@@ -487,7 +512,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6683296320774264830}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -518,6 +543,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &98316762270050955
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683296320774264830}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: 0.014541842, y: 0.0004720688, z: -0.00018788874}
 --- !u!1 &6770462032000558500
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +578,7 @@ GameObject:
   - component: {fileID: 1445851191775129041}
   - component: {fileID: 8235423992699723519}
   - component: {fileID: 4487371476179414957}
+  - component: {fileID: 7286268724888364800}
   m_Layer: 0
   m_Name: N_Muscle Car_10 FR Tire
   m_TagString: Untagged
@@ -616,7 +665,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6770462032000558500}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -647,6 +696,29 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &7286268724888364800
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770462032000558500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: -0.014541842, y: 0.0004720688, z: -0.00018788874}
 --- !u!1 &8001386666253768874
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +731,7 @@ GameObject:
   - component: {fileID: 7601454375869680000}
   - component: {fileID: 4680778390624161594}
   - component: {fileID: 6424026404203281412}
+  - component: {fileID: 7956540252227935255}
   m_Layer: 0
   m_Name: N_Muscle Car_10 BL Tire
   m_TagString: Untagged
@@ -745,7 +818,7 @@ WheelCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8001386666253768874}
   serializedVersion: 2
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.38
   m_SuspensionSpring:
     spring: 35000
@@ -776,3 +849,26 @@ WheelCollider:
   m_LayerOverridePriority: 0
   m_Enabled: 1
   m_ProvidesContacts: 0
+--- !u!136 &7956540252227935255
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001386666253768874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.39154845
+  m_Height: 0.783097
+  m_Direction: 1
+  m_Center: {x: 0.014541842, y: 0.0004720688, z: -0.00018809736}
