@@ -10289,7 +10289,7 @@ GameObject:
   - component: {fileID: 714884716}
   - component: {fileID: 714884715}
   m_Layer: 0
-  m_Name: Spawn Manager object
+  m_Name: Spawn Manager Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10312,9 +10312,8 @@ MonoBehaviour:
   - {fileID: 1813357942169304022, guid: 3dd97330b2ebd884e9f796894e026064, type: 3}
   spawnCar: 0
   spawnObject: 1
-  timeToSpawnCar: 0
-  timeBettwenSpawnCar: 0
-  spawnRate: 0.5
+  carSpawnRate: 0
+  objectSpawnRate: 1
   spawnRangeX1: -928.33
   spawnRangeX2: -912.78
   spawnPosY: 112.28
@@ -27123,9 +27122,8 @@ MonoBehaviour:
   - {fileID: 1813357942169304022, guid: 3dd97330b2ebd884e9f796894e026064, type: 3}
   spawnCar: 1
   spawnObject: 1
-  timeToSpawnCar: 0
-  timeBettwenSpawnCar: 0
-  spawnRate: 1
+  carSpawnRate: 0.8
+  objectSpawnRate: 1
   spawnRangeX1: -928.33
   spawnRangeX2: -912.78
   spawnPosY: 112.28
@@ -27861,7 +27859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   walkSpeed: 7
   sprintSpeed: 10
-  groundDrag: 10
+  groundDrag: 5
   jumpForce: 12
   jumpCooldown: 0.5
   airMultiplier: 0.5
@@ -27880,6 +27878,7 @@ MonoBehaviour:
   shield: {fileID: 1436172470}
   isPlayerDead: 0
   playerWin: 0
+  levelIndexWin: 5
   orientation: {fileID: 1610068184}
   state: 0
 --- !u!4 &1759732086

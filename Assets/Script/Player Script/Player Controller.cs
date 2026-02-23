@@ -48,7 +48,11 @@ public class PlayerController : MonoBehaviour
     public bool isPlayerDead = false;
     public bool playerWin = false;
 
-    
+    [Header("Level Info")]
+    public int levelIndexWin = 0;
+
+
+
 
 
 
@@ -277,7 +281,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Win"))
         {
-            SceneManagement.LoadSceneByIndex(4);
+            SceneManagement.LoadSceneByIndex(levelIndexWin);
         }
     }
 

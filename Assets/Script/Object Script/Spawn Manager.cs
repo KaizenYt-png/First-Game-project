@@ -10,11 +10,9 @@ public class SpawnManager : MonoBehaviour
 
     public bool spawnCar;
     public bool spawnObject;
-    
-    public float timeToSpawnCar = 5;
-    public float timeBettwenSpawnCar = 4;
 
-    public float spawnRate = 0.5f;
+    public float carSpawnRate = 0.5f;
+    public float objectSpawnRate = 0.5f;
     /*public float timeToSpawnBox = 1;
       public float timeBettwenSpawnBox = 2; */
 
@@ -54,7 +52,7 @@ public class SpawnManager : MonoBehaviour
         {
             while (endSpawning.gameActive)
             {
-                yield return new WaitForSeconds(spawnRate);
+                yield return new WaitForSeconds(carSpawnRate);
                 // Making the car spawn at random location on X axis
                 int carIndex = Random.Range(0, carPrefabs.Length);
                 float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
@@ -70,7 +68,7 @@ public class SpawnManager : MonoBehaviour
         {
             while (endSpawning.gameActive)
             {
-                yield return new WaitForSeconds(spawnRate);
+                yield return new WaitForSeconds(objectSpawnRate);
                 // Making the box spawn at random location on X axis
                 int objectIndex = Random.Range(0, objectPrefabs.Length);
                 float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);

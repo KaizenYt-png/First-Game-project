@@ -25938,12 +25938,12 @@ MonoBehaviour:
   - {fileID: 1718881139866272103, guid: d84787863a48b884e8c303159510c801, type: 3}
   - {fileID: 3859950695711406603, guid: eb1d6cef4963f9948a2d46b477134dfb, type: 3}
   - {fileID: 2922220883736789182, guid: 041e4e3100f07184cacfe35dce34f022, type: 3}
-  boxPrefabs: {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
-  gameManager: {fileID: 2130396687}
-  endSpawning: {fileID: 0}
-  timeToSpawnCar: 0
-  timeBettwenSpawnCar: 0
-  spawnRate: 2
+  objectPrefabs:
+  - {fileID: 1003893886525460965, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+  spawnCar: 1
+  spawnObject: 1
+  carSpawnRate: 1.5
+  objectSpawnRate: 1
   spawnRangeX1: -928.33
   spawnRangeX2: -912.78
   spawnPosY: 112.28
@@ -26686,6 +26686,7 @@ MonoBehaviour:
   shield: {fileID: 1436172470}
   isPlayerDead: 0
   playerWin: 0
+  levelIndexWin: 4
   orientation: {fileID: 1610068184}
   state: 0
 --- !u!4 &1759732086
