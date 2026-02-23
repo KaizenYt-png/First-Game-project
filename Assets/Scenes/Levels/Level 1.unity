@@ -14444,7 +14444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1030621131}
-  remainingTime: 60
+  remainingTime: 90
 --- !u!114 &1020802501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25943,7 +25943,7 @@ MonoBehaviour:
   endSpawning: {fileID: 0}
   timeToSpawnCar: 0
   timeBettwenSpawnCar: 0
-  spawnRate: 1
+  spawnRate: 2
   spawnRangeX1: -928.33
   spawnRangeX2: -912.78
   spawnPosY: 112.28
@@ -26671,7 +26671,6 @@ MonoBehaviour:
   jumpForce: 12
   jumpCooldown: 0.5
   airMultiplier: 0.5
-  gravityModifier: 2
   crouchSpeed: 3.5
   crouchYScale: 0.5
   jumpKey: 32

@@ -30,6 +30,6 @@ public class LevelComplete : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManagement.LoadSceneByIndex(3);
+        SceneManagement.LoadSceneByIndex(0);
     }
 }

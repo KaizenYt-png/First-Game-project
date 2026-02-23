@@ -5,9 +5,8 @@ public class SpawnManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject[] carPrefabs;
-    public GameObject boxPrefabs;
-    public GameManager gameManager;
-    public EndSpawning endSpawning;
+    public GameObject[] objectPrefabs;
+    private EndSpawning endSpawning;
     
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
@@ -28,7 +27,6 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         endSpawning = GameObject.Find("End Spawning Trigger").GetComponent<EndSpawning>();
 
         gameActive = true;
@@ -49,7 +47,7 @@ public class SpawnManager : MonoBehaviour
         while (endSpawning.gameActive)
         {
             yield return new WaitForSeconds(spawnRate);
-            SpawnBox();
+            SpawnObject();
             SpawnCar();
         }
     }
@@ -64,12 +62,13 @@ public class SpawnManager : MonoBehaviour
         Instantiate(carPrefabs[carIndex], spawnPos, carPrefabs[carIndex].transform.rotation);
     }
 
-    void SpawnBox()
+    void SpawnObject()
     {
         // Making the box spawn at random location on X axis
+        int objectIndex = Random.Range(0, objectPrefabs.Length);
         float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
         Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-        Instantiate(boxPrefabs, spawnPos, boxPrefabs.transform.rotation);
+        Instantiate(objectPrefabs[objectIndex], spawnPos, objectPrefabs[objectIndex].transform.rotation);
     }
 
     
