@@ -7,6 +7,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] carPrefabs;
     public GameObject[] objectPrefabs;
     private EndSpawning endSpawning;
+
+    public bool spawnCar;
+    public bool spawnObject;
     
     public float timeToSpawnCar = 5;
     public float timeBettwenSpawnCar = 4;
@@ -30,7 +33,8 @@ public class SpawnManager : MonoBehaviour
         endSpawning = GameObject.Find("End Spawning Trigger").GetComponent<EndSpawning>();
 
         gameActive = true;
-        StartCoroutine(SpawnAllTarget());
+        StartCoroutine(SpawnCar());
+        StartCoroutine(SpawnObject());
 
 
     }
@@ -41,36 +45,41 @@ public class SpawnManager : MonoBehaviour
          
     }
 
-    public IEnumerator SpawnAllTarget()
+
+
+
+    public IEnumerator SpawnCar()
     {
-        
-        while (endSpawning.gameActive)
+        if (spawnCar == true)
         {
-            yield return new WaitForSeconds(spawnRate);
-            SpawnObject();
-            SpawnCar();
+            while (endSpawning.gameActive)
+            {
+                yield return new WaitForSeconds(spawnRate);
+                // Making the car spawn at random location on X axis
+                int carIndex = Random.Range(0, carPrefabs.Length);
+                float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
+                Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
+                Instantiate(carPrefabs[carIndex], spawnPos, carPrefabs[carIndex].transform.rotation);
+            }
         }
     }
-    
 
-    void SpawnCar()
+    public IEnumerator SpawnObject()
     {
-        // Making the car spawn at random location on X axis
-        int carIndex = Random.Range(0,carPrefabs.Length);
-        float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
-        Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-        Instantiate(carPrefabs[carIndex], spawnPos, carPrefabs[carIndex].transform.rotation);
+        if (spawnObject == true)
+        {
+            while (endSpawning.gameActive)
+            {
+                yield return new WaitForSeconds(spawnRate);
+                // Making the box spawn at random location on X axis
+                int objectIndex = Random.Range(0, objectPrefabs.Length);
+                float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
+                Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
+                Instantiate(objectPrefabs[objectIndex], spawnPos, objectPrefabs[objectIndex].transform.rotation);
+            }
+        }
+        
+        
     }
-
-    void SpawnObject()
-    {
-        // Making the box spawn at random location on X axis
-        int objectIndex = Random.Range(0, objectPrefabs.Length);
-        float spawnPosX = Random.Range(spawnRangeX1, spawnRangeX2);
-        Vector3 spawnPos = new Vector3(spawnPosX, spawnPosY, spawnPosZ);
-        Instantiate(objectPrefabs[objectIndex], spawnPos, objectPrefabs[objectIndex].transform.rotation);
-    }
-
-    
 
 }
